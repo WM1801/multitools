@@ -1,0 +1,37 @@
+# Zephyr / West build artifacts
+build/
+outdir/
+outdir-*
+*.elf
+*.bin
+*.hex
+*.map
+
+# Zephyr toolchain cache & test outputs
+.cache/
+twister-out*/
+sanity-out*/
+coverage-report/
+myresults.xml
+tests/RunResults.xml
+
+# IDE & editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+.clangd/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# ESP32 specific binaries (Wi-Fi/BT libs) if not managed by West manifest
+# Usually these are handled by the HAL module, but if vendored locally:
+components/bt/controller/lib_esp32/
+components/esp_wifi/lib/
+
+# Python virtual environment (если используете)
+.venv/
+__pycache__/
+*.pyc
